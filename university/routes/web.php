@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UniversityController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//Route::get('/list','UniversityController@fetch');
+// Route::get('/list', function () {
+//     return 'Hello World';
+// });
+
+Route::get('/list', [UniversityController::class, 'fetch']);

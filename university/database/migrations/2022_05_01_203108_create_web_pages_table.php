@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Universities;
+use App\Models\University;
 return new class extends Migration
 {
     /**
@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('web_pages', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Universities::class)->constrained();
+            $table->foreignIdFor(University::class)->constrained();
             $table->string('url');
             $table->timestamps();
         });
