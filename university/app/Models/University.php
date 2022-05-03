@@ -29,12 +29,6 @@ class University extends Model
         'name',
     ];
 
-    public $alpha_two_code;
-    public $country;
-    public $state_province;
-    public $name;
-
-
      /**
      * The relationships that are eager loaded by default
      *

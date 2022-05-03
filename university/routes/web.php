@@ -12,13 +12,5 @@ use App\Http\Controllers\UniversityController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-//Route::get('/list','UniversityController@fetch');
-// Route::get('/list', function () {
-//     return 'Hello World';
-// });
-
-Route::get('/list', [UniversityController::class, 'fetch']);
+// route to main page, calling the UniversityController to get data from db
+Route::get('/', [UniversityController::class, 'getList']); 
